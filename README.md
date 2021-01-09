@@ -1,5 +1,7 @@
 # Parallel-Exercise1
 
+To test locally, you can uncomment the assignment on *N1 in the **read_txt** function
+and have a smaller corpus. Furthermore, you can uncomment the printing of the result in the **main** function.
 
 ## **V0**
 The files that pertain to the V0 part of the exercise are
@@ -11,6 +13,7 @@ char data_points[] = "corpus.txt";
 ```
 The txt must have the following format to fuction properly.
 Each line has d float numbers that are delimited by \t.
+
 ```
 2.59E+00  4.69E-01	2.07E+01	3.23E-01	9.68E-03
 0.00E+00	9.05E-02	1.77E-01	4.58E-01	7.18E-02	
