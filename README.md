@@ -12,9 +12,11 @@ txt by giving it to the **read_txt** function in the **auxiliary.c**, as follows
 char data_points[] = "corpus.txt";
 ```
 The txt must have the following format to fuction properly.
-Each line has d float numbers that are delimited by \t.
+There are n=3 lines, where each line represents one point.
+Each line has d=5 floats (coordinates) that are delimited by \t.
 
 ```
+3 5
 2.59E+00  4.69E-01	2.07E+01	3.23E-01	9.68E-03
 0.00E+00	9.05E-02	1.77E-01	4.58E-01	7.18E-02	
 3.86E+00	6.46E-01	1.81E+01	2.34E-01	3.07E-02	
