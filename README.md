@@ -34,7 +34,7 @@ Alternatively, in the **HPC** the following command can be used.
 srun -n 4 ./V1
 ```
 ## **V2**
-The files that pertain to the V1 of the exercise are **V2.c**, **auxiliary.c**, **auxiliary.h**, **VPT.c** and **VPT.h**.
+The files that pertain to the V2 of the exercise are **V2.c**, **auxiliary.c**, **auxiliary.h**, **VPT.c** and **VPT.h**.
 
 The **Makefile** can be used to make a test locally using the following command. (p = number of processors, e.g 4)
 
