@@ -1,42 +1,44 @@
-# Parallel-Exercise2
-
-**mmio.c** and **mmio.h** are used to extract the info from the .mtx files.
-The source code is given in the following link that you provided.
-https://math.nist.gov/MatrixMarket/mmio-c.html
-
-**validity.py** was used for the 3.1.1 section of this exercise.
-**plot.py** was used to create the diagrams for the report.
-
-## **2 Preliminaries**
-The files that pertain to the preliminaries part of the exercise are
-**main.c**, **main_openmp.c** and **main_cilk.c**. Choose the appropriate 
-matrix by giving it as an argument to main(), as follows.
-
-```
-./main matrix_name.mtx
-./main_openmp matrix_name.mtx
-./main_cilk matrix_name.mtx
-```
-Alternatively, one can use the **Makefile** to make a test that runs all of the
-above programs, like so.
-```
-make testV3 matrix="matrix_name.mtx"
-```
-## **3 Main part**
-The files that pertain to the main part of the exercise are **make_graph.c**
-**main3.c**, **main3_openmp.c**, **main3_cilk.c** and **main3_thread.c**.
-
-It's vital that the **make_graph.c** file is run first so that a *graph.mtx*
-file is created. The remaining programs use that as their input.
-The **make_graph.c** works like the previous ones, as follows.
-```
-./make_graph matrix.mtx
-```
-The **Makefile**  can be used to make a test that runs all of the
-above programs, like so.
-```
-make testV4
-```
+# Parallel-Exercise1
 
 
-Repo for the first exercise of course 050 - Parallel and Distributed Systems, Aristotle University of Thessaloniki, Dpt. of Electrical & Computer Engineering.
+## **V0**
+The files that pertain to the V0 part of the exercise are
+**V0.c**, **auxiliary.c** and **auxiliary.h**. Choose the appropriate 
+txt by giving it to the **read_txt** function in the **auxiliary.c**, as follows.
+
+```
+char data_points[] = "corpus.txt";
+```
+The txt must have the following format to fuction properly.
+Each line has d float numbers that are delimited by \t.
+```
+2.59E+00  4.69E-01	2.07E+01	3.23E-01	9.68E-03
+0.00E+00	9.05E-02	1.77E-01	4.58E-01	7.18E-02	
+3.86E+00	6.46E-01	1.81E+01	2.34E-01	3.07E-02	
+```
+## **V1**
+The files that pertain to the V1 of the exercise are **V1.c**, **auxiliary.c** and **auxiliary.h**.
+
+The **Makefile** can be used to make a test locally using the following command. (p = number of processors, e.g 4)
+
+```
+make testV1 p=4
+```
+Alternatively, in the **HPC** the following command can be used.
+```
+srun -n 4 ./V1
+```
+## **V2**
+The files that pertain to the V1 of the exercise are **V2.c**, **auxiliary.c**, **auxiliary.h**, **VPT.c** and **VPT.h**.
+
+The **Makefile** can be used to make a test locally using the following command. (p = number of processors, e.g 4)
+
+```
+make testV2 p=4
+```
+Alternatively, in the **HPC** the following command can be used.
+```
+srun -n 4 ./V2
+```
+
+Repo for the second exercise of course 050 - Parallel and Distributed Systems, Aristotle University of Thessaloniki, Dpt. of Electrical & Computer Engineering.
