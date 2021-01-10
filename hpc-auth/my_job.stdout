@@ -1,0 +1,13 @@
+rm -f V0 V1 V2
+gcc -O3 -o V0 V0.c -lopenblas -lm -fopenmp
+mpicc -O3 -o V1 V1.c -lopenblas -lm -fopenmp
+mpicc -O3 -o V2 V2.c  -lm -fopenmp
+
+*******************************
+ V1_Duration = 1074.943406 sec
+*******************************
+    
+*****************************
+ V2 Duration = 72.626727 sec
+*****************************
+rm -f V0 V1 V2
