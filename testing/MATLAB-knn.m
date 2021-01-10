@@ -1,0 +1,20 @@
+clear all;
+filename1 = 'X.txt';
+delimiterIn = ' ';
+headerlinesIn = 0;
+X = importdata(filename1,delimiterIn,headerlinesIn);
+filename2 = 'Y.txt';
+delimiterIn = ' ';
+Y = importdata(filename2,delimiterIn,headerlinesIn);
+D1 = sqrt(bsxfun(@plus, bsxfun(@minus, sum(X.^2,2), 2*X*Y.'), sum(Y.^2,2).'));
+filename2 = 'Z.txt';
+delimiterIn = ' ';
+Z = importdata(filename2,delimiterIn,headerlinesIn);
+D2 = sqrt(bsxfun(@plus, bsxfun(@minus, sum(Z.^2,2), 2*Z*Z.'), sum(Z.^2,2).'));
+%d = 15; m = 66; n = 300;
+%e1 = ones(d, m);
+%e2 = ones(n, d);
+%D2 = sqrt((X.^2)*e1 - 2*X*Y.' + e2*((Y.^2).'));
+[Idx,D] = knnsearch(X,Y,'K',5,'Distance','euclidean');
+[Idx2,D3] = knnsearch(Z,Z,'K',5,'Distance','euclidean');
+
